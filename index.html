@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="/Screenshot 2025-04-22 233629.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hassan Khan - Portfolio</title>
+<script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"3bd2de51550576ca0aaadf4b532f2b40","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+
+  <!-- Importing Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Importing Slick Carousel CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <style>
+    /* General Design Tweaks */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, rgb(37, 37, 37) 0%, rgb(119, 118, 118) 100%);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      border-right: 3px solid #fff;
+      white-space: nowrap;
+      animation: typing 3.5s steps(15) 1s infinite alternate, blinkCaret 0.75s step-end infinite;
+      display: inline-block;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Typing Animation */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 15ch;
+      }
+    }
+
+    @keyframes blinkCaret {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    /* Neumorphism Button Styling */
+    .neumorphism {
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.7);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .neumorphism:hover {
+      box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.2), -12px -12px 24px rgba(255, 255, 255, 0.8);
+      transform: translateY(-5px);
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #1a202c;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .card,
+    .testimonial-card {
+      background: #1a202c;
+      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover,
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Footer Styling */
+    footer {
+      background: #1a202c;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #e2e8f0;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Testimonial Card Custom Styling */
+    .testimonial-card blockquote {
+      font-size: 1.2rem;
+      color: #f7fafc;
+      font-style: italic;
+      border-left: 4px solid #5a67d8;
+      padding-left: 20px;
+    }
+
+    .testimonial-card img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+
+    .testimonial-card .testimonial-text {
+      color: #e2e8f0;
+    }
+
+    /* About Me Section */
+    .about-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: #1a202c;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-container h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .about-container p {
+      font-size: 1.2rem;
+      color: #e2e8f0;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-container ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .about-container li {
+      font-size: 1rem;
+      color: #e2e8f0;
+      margin: 0.5rem 0;
+    }
+
+    /* Contact Section */
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: #1a202c;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-container h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .contact-container form input,
+    .contact-container form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      background: #2d3748;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+    }
+
+    .contact-container form button {
+      padding: 1rem 2rem;
+      background:   #5a67d8;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-container form button:hover {
+      background: #bdb0b0;
+    }
+
+    /* Image Circle in Hero */
+    .hero img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+  <!-- Header Section -->
+  <header>
+    <h1>👋 Welcome to My Portfolio</h1>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="text-center">
+      <img src="/WhatsApp Image 2025-04-09 at 00.14.21_e0ed7f15.jpg" alt="Hassan Khan's Image" class="mx-auto">
+      <h1>Hassan Khan</h1>
+      <p>A passionate web developer, AI enthusiast, and chatbot builder. I create beautiful, user-centric digital experiences. 🚀</p>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section>
+    <div class="about-container">
+      <h2>🙋‍♂️ About Me</h2>
+      <p>I'm Hassan Khan, a passionate tech student learning and growing in the fields of web development, AI, and chatbots 🤖. I love creating intuitive user experiences and solving real-world problems through technology.</p>
+      <ul>
+        <li>🎂 Date of Birth: November 4, 2009</li>
+        <li>📍 Location: Karachi, Pakistan</li>
+        <li>🎓 Education: Student at Saylani Mass IT Training Program</li>
+        <li>📧 Email: hassanrustam009@gmail.com</li>
+        <li>📱 Phone: 0315 8335369</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="bg-gray-900 text-white">
+    <h2 class="section-title">🛠 Skills</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div class="neumorphism p-6 text-center">
+        <h3 class="text-xl font-semibold">HTML</h3>
+      </div>
+      <div class="neumorphism p-6 text-center">
+        <h3 class="text-xl font-semibold">CSS</h3>
+      </div>
+      <div class="neumorphism p-6 text-center">
+        <h3 class="text-xl font-semibold">JavaScript</h3>
+      </div>
+      <div class="neumorphism p-6 text-center">
+        <h3 class="text-xl font-semibold">AI Basics</h3>
+      </div>
+      <div class="neumorphism p-6 text-center">
+        <h3 class="text-xl font-semibold">Chatbots</h3>
+      </div>
+      <div class="neumorphism p-6 text-center">
+        <h3 class="text-xl font-semibold">Designer</h3>
+      </div>
+      <div class="neumorphism p-6 text-center">
+        <h3 class="text-xl font-semibold">Web Developer</h3>
+      </div>
+      <div class="neumorphism p-6 text-center">
+        <h3 class="text-xl font-semibold">React</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section>
+    <h2 class="section-title">📁 Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card">
+        <img src="/Screenshot 2025-04-22 221208.png" alt="Project Image" class="w-full h-48 object-cover rounded-t-lg">
+        <h3 class="text-2xl font-semibold">Saylani Website</h3>
+        <p>A responsive website developed for Saylani Welfare to engage with the community and provide services.</p>
+      </div>
+      <div class="card">
+        <img src="/Screenshot 2025-04-22 220750.png" alt="Project Image" class="w-full h-48 object-cover rounded-t-lg">
+        <h3 class="text-2xl font-semibold">Saylani Portfolio</h3>
+        <p>A personal portfolio showcasing my skills and projects with a modern and interactive design.</p>
+      </div>
+      <div class="card">
+        <img src="/Screenshot 2025-04-22 221242.png" alt="Project Image" class="w-full h-48 object-cover rounded-t-lg">
+        <h3 class="text-2xl font-semibold">Saylani Chatbot</h3>
+        <p>A chatbot developed to assist with user queries and provide efficient service information.</p>
+      </div>
+    </div>
+  </section>
+   <!-- Testimonials Section -->
+   <section class="py-20 bg-gray-900">
+    <h2 class="section-title">💬 Testimonials</h2>
+    <div class="max-w-4xl mx-auto">
+      <div class="slick-slider">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card bg-gray-800 p-8 rounded-lg shadow-lg">
+          <blockquote class="text-xl italic text-gray-300">
+            "Hassan is an exceptional individual. He has great attention to detail and is highly motivated to improve himself with every project he tackles."
+          </blockquote>
+          <div class="mt-4 flex items-center">
+            <img src="/images.jpg" alt="Instructor" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <p class="font-semibold text-gray-200">Hammad Sheikh</p>
+              <p class="text-sm text-gray-400">Saylani Mass IT Training Program</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card bg-gray-800 p-8 rounded-lg shadow-lg">
+          <blockquote class="text-xl italic text-gray-300">
+            "I had the pleasure of working with Hassan on several projects. His skills in web development and chatbots are outstanding. A true asset to any team!"
+          </blockquote>
+          <div class="mt-4 flex items-center">
+            <img src="/4.AAMIR-IBRAHIM-–-JAZZ-1.jpg" alt="Teammate" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <p class="font-semibold text-gray-200">AAMIR IBRAHIM</p>
+              <p class="text-sm text-gray-400">Client Jazz Company</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card bg-gray-800 p-8 rounded-lg shadow-lg">
+          <blockquote class="text-xl italic text-gray-300">
+            "Hassan’s portfolio is a great representation of his talent and creativity. He has an eye for design, and his ability to turn ideas into reality is impressive."
+          </blockquote>
+          <div class="mt-4 flex items-center">
+            <img src="/1.Salim-Ghauri.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <p class="font-semibold text-gray-200">Salim Ghauri</p>
+              <p class="text-sm text-gray-400">Freelance Client</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- 🌑 Contact Section - Dark Theme -->
+<section id="contact" style="background-color: #121212; color: #ffffff; padding: 40px 20px; font-family: sans-serif;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 30px;">📞 Contact Us</h2>
+
+  <form action="https://formsubmit.co/hassanrustam009@gmail.com" method="POST" style="max-width: 600px; margin: 0 auto;">
+    <input type="hidden" name="_captcha" value="false">
+
+    <label for="name">👤 Your Name</label><br>
+    <input type="text" name="name" required style="width: 100%; padding: 10px; margin: 10px 0 20px 0; background-color: #1e1e1e; border: none; color: white; border-radius: 8px;"><br>
+
+    <label for="email">📧 Your Email</label><br>
+    <input type="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0 20px 0; background-color: #1e1e1e; border: none; color: white; border-radius: 8px;"><br>
+
+    <label for="message">💬 Your Message</label><br>
+    <textarea name="message" rows="5" required style="width: 100%; padding: 10px; margin: 10px 0 30px 0; background-color: #1e1e1e; border: none; color: white; border-radius: 8px;"></textarea><br>
+
+    <button type="submit" style="background: linear-gradient(135deg, #ff4e50, #f9d423); padding: 12px 30px; color: #121212; font-weight: bold; border: none; border-radius: 30px; cursor: pointer; transition: all 0.3s ease;">
+      🚀 Send Message
+    </button>
+  </form>
+</section>
+
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Hassan Khan | All Rights Reserved</p>
+  </footer>
+</body>
+
+</html>
